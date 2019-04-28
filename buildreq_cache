@@ -3,11 +3,13 @@ R-JM
 R-MatrixModels
 R-Rcpp
 R-RcppArmadillo
+R-SparseM
 R-cobs
 R-doParallel
 R-foreach
 R-ggplot2
 R-gtable
+R-iterators
 R-joineR
 R-lazyeval
 R-lme4

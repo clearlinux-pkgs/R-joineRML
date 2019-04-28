@@ -4,37 +4,26 @@
 #
 Name     : R-joineRML
 Version  : 0.4.2
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/joineRML_0.4.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/joineRML_0.4.2.tar.gz
 Summary  : Joint Modelling of Multivariate Longitudinal Data and
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-joineRML-lib = %{version}-%{release}
-Requires: R-MatrixModels
-Requires: R-foreach
-Requires: R-ggplot2
-Requires: R-gtable
-Requires: R-lazyeval
-Requires: R-mime
-Requires: R-minqa
-Requires: R-munsell
-Requires: R-mvtnorm
-Requires: R-nloptr
-Requires: R-plyr
-Requires: R-rngWELL
-Requires: R-scales
-Requires: R-statmod
-Requires: R-tibble
+Requires: R-SparseM
+Requires: R-iterators
 BuildRequires : R-JM
 BuildRequires : R-MatrixModels
 BuildRequires : R-Rcpp
 BuildRequires : R-RcppArmadillo
+BuildRequires : R-SparseM
 BuildRequires : R-cobs
 BuildRequires : R-doParallel
 BuildRequires : R-foreach
 BuildRequires : R-ggplot2
 BuildRequires : R-gtable
+BuildRequires : R-iterators
 BuildRequires : R-joineR
 BuildRequires : R-lazyeval
 BuildRequires : R-lme4
@@ -71,10 +60,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552892123
+export SOURCE_DATE_EPOCH=1556489532
 
 %install
-export SOURCE_DATE_EPOCH=1552892123
+export SOURCE_DATE_EPOCH=1556489532
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -110,7 +99,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  joineRML || :
+R CMD check --no-manual --no-examples --no-codoc joineRML || :
 
 
 %files
