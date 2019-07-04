@@ -4,17 +4,32 @@
 #
 Name     : R-joineRML
 Version  : 0.4.2
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/joineRML_0.4.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/joineRML_0.4.2.tar.gz
 Summary  : Joint Modelling of Multivariate Longitudinal Data and
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-joineRML-lib = %{version}-%{release}
+Requires: R-JM
+Requires: R-Rcpp
+Requires: R-RcppArmadillo
 Requires: R-SparseM
+Requires: R-cobs
+Requires: R-doParallel
+Requires: R-foreach
+Requires: R-ggplot2
 Requires: R-iterators
+Requires: R-joineR
+Requires: R-lme4
+Requires: R-minqa
+Requires: R-munsell
+Requires: R-mvtnorm
+Requires: R-nloptr
+Requires: R-quantreg
+Requires: R-randtoolbox
+Requires: R-statmod
 BuildRequires : R-JM
-BuildRequires : R-MatrixModels
 BuildRequires : R-Rcpp
 BuildRequires : R-RcppArmadillo
 BuildRequires : R-SparseM
@@ -22,22 +37,16 @@ BuildRequires : R-cobs
 BuildRequires : R-doParallel
 BuildRequires : R-foreach
 BuildRequires : R-ggplot2
-BuildRequires : R-gtable
 BuildRequires : R-iterators
 BuildRequires : R-joineR
-BuildRequires : R-lazyeval
 BuildRequires : R-lme4
-BuildRequires : R-mime
 BuildRequires : R-minqa
 BuildRequires : R-munsell
 BuildRequires : R-mvtnorm
 BuildRequires : R-nloptr
-BuildRequires : R-plyr
+BuildRequires : R-quantreg
 BuildRequires : R-randtoolbox
-BuildRequires : R-rngWELL
-BuildRequires : R-scales
 BuildRequires : R-statmod
-BuildRequires : R-tibble
 BuildRequires : buildreq-R
 
 %description
@@ -59,13 +68,13 @@ lib components for the R-joineRML package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1556489532
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562201586
 
 %install
-export SOURCE_DATE_EPOCH=1556489532
+export SOURCE_DATE_EPOCH=1562201586
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -94,7 +103,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
