@@ -1,12 +1,3 @@
-0.4.2
+0.4.3
 R-JM
-R-RcppArmadillo
-R-SparseM
-R-iterators
 R-joineR
-R-minqa
-R-munsell
-R-nloptr
-R-quantreg
-R-statmod
-util-linux
