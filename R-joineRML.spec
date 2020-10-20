@@ -4,7 +4,7 @@
 #
 Name     : R-joineRML
 Version  : 0.4.4
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/joineRML_0.4.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/joineRML_0.4.4.tar.gz
 Summary  : Joint Modelling of Multivariate Longitudinal Data and
