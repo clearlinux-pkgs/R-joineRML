@@ -1,5 +1,5 @@
 PKG_NAME := R-joineRML
-URL = https://cran.r-project.org/src/contrib/joineRML_0.4.6.tar.gz
+URL = https://ftp.osuosl.org/pub/cran/src/contrib/joineRML_0.4.7.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
